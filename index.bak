@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- SEO & Compartilhamento -->
+  <title>Dra. Dayane Dias | Psicóloga Clínica - Atendimento Online e Presencial</title>
+  <meta name="description" content="Atendimento psicológico com acolhimento e profissionalismo. Terapia online e presencial para ansiedade, depressão, relacionamentos e autoconhecimento." />
+  <meta name="keywords" content="psicóloga, terapia online, atendimento psicológico, ansiedade, depressão, saúde mental" />
+  <meta name="author" content="Dra. Dayane Dias" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph (WhatsApp/Facebook) -->
+  <meta property="og:title" content="Dra. Dayane Dias | Psicóloga Clínica" />
+  <meta property="og:description" content="Atendimento psicológico acolhedor. Dê o primeiro passo para uma vida mais leve." />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.seusite.com.br" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- 🔝 HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Dra. Dayane Dias</h1>
+        <span>Psicóloga Clínica | CRP 12/34567</span>
+      </div>
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a href="#" class="nav-whatsapp js-whatsapp-link" data-message="Olá, Dra. Dayane. Gostaria de agendar uma conversa inicial." target="_blank" rel="noopener noreferrer">Agendar</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro" title="Alternar tema">
+          <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </button>
+              <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menu" aria-controls="mainNav" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  <!-- 🌟 HERO -->
+  <section id="inicio" class="hero section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h2>Cuidar da sua saúde emocional <br><span>é o passo mais importante</span></h2>
+        <p>Atendimento psicológico com acolhimento, ética e profissionalismo. Online ou presencial.</p>
+        <a href="#" class="btn-primary js-whatsapp-link" data-message="Olá, Dra. Dayane. Gostaria de agendar uma conversa inicial." target="_blank" rel="noopener noreferrer">💬 Agendar atendimento</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/psicologa-hero.jpg" alt="Dra. Dayane Dias - Psicóloga Clínica" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 👩‍⚕️ SOBRE -->
+  <section id="sobre" class="sobre section">
+    <div class="container sobre-content">
+      <div class="sobre-image">
+        <img src="assets/images/psicologa-sobre.jpg" alt="Consultório aconchegante da Dra. Dayane Dias" />
+      </div>
+      <div class="sobre-text">
+        <h2>Sobre mim</h2>
+        <p>Sou Dra. Dayane Dias, psicóloga clínica com mais de 10 anos de experiência. Atendo adultos e casais com abordagem na Terapia Cognitivo-Comportamental (TCC), ajudando meus pacientes a desenvolverem autoconsciência e estratégias práticas para lidar com desafios emocionais.</p>
+        <p>Acredito que cada pessoa tem dentro de si os recursos necessários para transformar sua vida. Meu papel é guiar esse processo com respeito, sigilo e acolhimento.</p>
+        <p><strong>CRP: 12/34567</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧠 COMO POSSO TE AJUDAR -->
+  <section id="ajuda" class="ajuda section">
+    <div class="container">
+      <h2>Como posso te ajudar?</h2>
+      <div class="ajuda-grid">
+        <div class="ajuda-item">😰 Ansiedade</div>
+        <div class="ajuda-item">😫 Estresse</div>
+        <div class="ajuda-item">💔 Relacionamentos</div>
+        <div class="ajuda-item">🌱 Autoconhecimento</div>
+        <div class="ajuda-item">😢 Depressão</div>
+        <div class="ajuda-item">🕊️ Luto</div>
+        <div class="ajuda-item">👨‍👩‍👧‍👦 Orientação parental</div>
+        <div class="ajuda-item">⚖️ Baixa autoestima</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💼 SERVIÇOS -->
+  <section id="servicos" class="servicos section">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="servicos-grid">
+        <div class="card">
+          <h3>🧘 Terapia Individual</h3>
+          <p>Sessões personalizadas para adultos e adolescentes.</p>
+        </div>
+        <div class="card">
+          <h3>❤️ Terapia para Casais</h3>
+          <p>Mediação e fortalecimento da relação.</p>
+        </div>
+        <div class="card">
+          <h3>💻 Atendimento Online</h3>
+          <p>Em todo o Brasil, com segurança e sigilo.</p>
+        </div>
+        <div class="card">
+          <h3>🏢 Atendimento Presencial</h3>
+          <p>Consultório aconchegante e acessível.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌱 BENEFÍCIOS -->
+  <section id="beneficios" class="beneficios section">
+    <div class="container">
+      <h2>Benefícios da terapia</h2>
+      <ul>
+        <li>✅ Mais equilíbrio emocional</li>
+        <li>✅ Autoconhecimento profundo</li>
+        <li>✅ Melhora nos relacionamentos</li>
+        <li>✅ Redução da ansiedade e estresse</li>
+        <li>✅ Qualidade de vida e bem-estar</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 💬 DEPOIMENTOS -->
+  <section id="depoimentos" class="depoimentos section">
+    <div class="container">
+      <h2>O que meus pacientes dizem</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento">
+          <p>"Excelente profissional, muito atenciosa. Me ajudou a sair de uma crise de ansiedade que parecia sem fim."</p>
+          <span>— Mariana S.</span>
+        </div>
+        <div class="depoimento">
+          <p>"Comecei a terapia achando que não iria funcionar. Hoje me sinto mais leve e preparado para os desafios."</p>
+          <span>— Rafael C.</span>
+        </div>
+        <div class="depoimento">
+          <p>"A terapia online funciona perfeitamente. Dra. Dayane é super acolhedora e profissional."</p>
+          <span>— Camila F.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 CTA FINAL -->
+  <section class="cta section" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Dê o primeiro passo para uma vida mais leve</h2>
+      <p>Agende uma conversa inicial sem compromisso.</p>
+      <a href="#" class="btn-primary btn-large js-whatsapp-link" data-message="Olá, Dra. Dayane. Gostaria de saber mais sobre o atendimento psicológico." target="_blank" rel="noopener noreferrer">💬 Falar no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- 📍 CONTATO + FORMULÁRIO -->
+  <section id="contato" class="contato section">
+    <div class="container contato-content">
+      
+      <!-- Formulário funcional via FormSubmit -->
+      <form class="form" id="contactForm" action="https://formsubmit.co/seuemail@dominio.com" method="POST" novalidate>
+        <h3>Envie uma mensagem</h3>
+
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" name="nome" placeholder="Seu nome" required minlength="3" maxlength="80" autocomplete="name" />
+          <small class="field-error" data-error-for="nome"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" name="email" placeholder="Seu e-mail" required maxlength="120" autocomplete="email" />
+          <small class="field-error" data-error-for="email"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">WhatsApp <span>(opcional)</span></label>
+          <input id="telefone" type="tel" name="telefone" placeholder="(11) 99999-9999" maxlength="20" autocomplete="tel" inputmode="tel" />
+          <small class="field-error" data-error-for="telefone"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Como posso te ajudar?" rows="4" required minlength="10" maxlength="700"></textarea>
+          <div class="textarea-helper">
+            <small class="field-error" data-error-for="mensagem"></small>
+            <small class="char-counter"><span id="messageCounter">0</span>/700</small>
+          </div>
+        </div>
+
+        <!-- Configurações FormSubmit -->
+        <input type="hidden" name="_subject" value="📩 Novo contato do site - Dra. Dayane Dias" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://www.seusite.com.br/obrigado.html" />
+
+        <button type="submit" id="contactSubmitButton">Enviar mensagem ✉️</button>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        <p class="form-note">Sua mensagem é sigilosa. Responderei em até 24h.</p>
+      </form>
+
+      <div class="info-contato">
+        <h3>Atendimento</h3>
+        <p><strong>📍 Presencial:</strong> Rua das Flores, 123 - Centro, São Paulo/SP</p>
+        <p><strong>💻 Online:</strong> Em todo Brasil via Google Meet</p>
+        <p><strong>⏰ Horários:</strong> Segunda a Sexta, 9h às 19h</p>
+        <p><strong>📞 WhatsApp:</strong> <a href="#" class="contact-whatsapp-link js-whatsapp-link" data-message="Olá, Dra. Dayane. Vim pelo site e gostaria de mais informações sobre os atendimentos." target="_blank" rel="noopener noreferrer">(11) 99999-9999</a></p>
+        
+        <!-- Mapa placeholder - pode substituir pelo embed do Google Maps -->
+        <div class="mapa-placeholder">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197632522562!2d-46.6567856!3d-23.5642245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- 🔻 FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Dra. Dayane Dias</h3>
+          <p>CRP 12/34567</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+          <a href="politica-privacidade.html">Política de Privacidade</a>
+        </div>
+        
+        <div class="social">
+          <a href="#" aria-label="Instagram">📸 Instagram</a>
+          <a href="#" aria-label="LinkedIn">🔗 LinkedIn</a>
+        </div>
+      </div>
+      
+      <div class="lgpd-notice">
+        ⚠️ Este site não substitui atendimento psicológico. Em caso de emergência, ligue 188 (CVV) ou procure um serviço de saúde presencial.
+      </div>
+      
+      <p class="copyright">© 2026 Dra. Dayane Dias - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão WhatsApp Flutuante -->
+  <a href="#" class="whatsapp-float js-whatsapp-link" data-message="Olá, Dra. Dayane. Gostaria de agendar uma conversa inicial." target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp">
+    💬
+  </a>
+
+
+
+  <!-- Botão Voltar ao Topo -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">
+    ↑
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

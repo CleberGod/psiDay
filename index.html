@@ -161,17 +161,27 @@
               </svg>Ambiente seguro e acolhedor</span>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="assets/images/psicologa-hero.webp" alt="Dra. Dayane Dias" />
-        </div>
+        
+        <div class="hero-image hero-carousel" id="heroCarousel">
+  <img src="assets/images/psicologa-hero.webp" class="carousel-image active" alt="Atendimento psicológico acolhedor" />
+  <img src="assets/images/hero-office.webp" class="carousel-image" alt="Sessão de terapia online" />
+  <img src="assets/images/psico-hero.webp" class="carousel-image" alt="Ambiente terapêutico confortável" />
+
+  <div class="carousel-dots" aria-label="Selecionar imagem do destaque">
+  <button class="dot active" type="button" aria-label="Mostrar imagem 1"></button>
+  <button class="dot" type="button" aria-label="Mostrar imagem 2"></button>
+  <button class="dot" type="button" aria-label="Mostrar imagem 3"></button>
+</div>
+</div>
+
       </div>
     </section>
 
     <section id="sobre" class="section about-section">
       <div class="container about-grid panel">
-        <div class="about-image">
-          <img src="assets/images/psicologa-sobre.webp" alt="Dra. Dayane Dias em ambiente acolhedor de atendimento" />
-        </div>
+        <button class="about-image about-image-button" type="button" id="openAboutModal" aria-label="Ampliar foto da Dra. Dayane Dias">
+  <img src="assets/images/psicologa-sobre.jpg" alt="Dra. Dayane Dias em atendimento online" />
+</button>
 
         <div class="about-content">
           <span class="section-kicker">Sobre a psicóloga</span>
@@ -462,7 +472,7 @@
       <div>
         <strong>Siga-me</strong>
         <div class="social-row">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/psidayanedias/" aria-label="Instagram">
             <svg class="icon">
               <use href="#icon-instagram"></use>
             </svg>
@@ -530,6 +540,30 @@
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
+
+  <div class="photo-modal" id="aboutPhotoModal" aria-hidden="true" hidden>
+  <div class="photo-modal__content" role="dialog" aria-modal="true" aria-labelledby="aboutPhotoTitle">
+    <button class="photo-modal__close" id="closeAboutModal" type="button" aria-label="Fechar foto ampliada">×</button>
+
+    <div class="photo-modal__image">
+      <img src="assets/images/psicologa-sobre.jpg" alt="Foto ampliada da Dra. Dayane Dias" />
+    </div>
+
+    <div class="photo-modal__info">
+      <span class="section-kicker">Sobre a psicóloga</span>
+      <h2 id="aboutPhotoTitle">Dra. Dayane Dias</h2>
+      <p>
+        Psicóloga clínica dedicada ao acolhimento, escuta ética e cuidado emocional.
+        Seu atendimento oferece um espaço seguro para reflexão, autoconhecimento e desenvolvimento pessoal.
+      </p>
+
+      <div class="photo-modal__badges">
+        <span>CRP 12/34567</span>
+        <span>Atendimento online e presencial</span>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

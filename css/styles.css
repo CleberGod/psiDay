@@ -1339,3 +1339,266 @@ body.modal-open {
     transform: scale(0.88);
   }
 }
+
+@media (max-width: 900px) {
+  .hero-strip-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* imagem sobe */
+  .hero-image {
+    order: -1;
+  }
+
+  /* garante espaçamento correto */
+  .hero-copy {
+    margin-top: 1.5rem;
+  }
+}
+
+/* =========================================================
+   MODAL FOTO SOBRE A PSICÓLOGA
+   ========================================================= */
+
+.about-image-button {
+  position: relative;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.about-image-button img {
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.about-image-button:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.92);
+}
+
+.about-image-hint {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: hsl(40 33% 98% / 0.9);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.25s ease;
+}
+
+.about-image-button:hover .about-image-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 4500;
+  display: none;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at top left, hsl(158 32% 32% / 0.18), transparent 34%),
+    hsl(158 25% 10% / 0.62);
+  backdrop-filter: blur(8px);
+}
+
+.photo-modal.is-open {
+  display: grid;
+}
+
+.photo-modal[hidden] {
+  display: none;
+}
+
+.photo-modal__content {
+  position: relative;
+  width: min(96vw, 980px);
+  max-height: 88vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0;
+  border: 1px solid hsl(40 20% 88% / 0.85);
+  border-radius: 1.35rem;
+  background: var(--card);
+  box-shadow: var(--shadow-modal);
+}
+
+.photo-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 1.45rem;
+  line-height: 1;
+  box-shadow: var(--shadow-soft);
+  transition: 0.2s ease;
+}
+
+.photo-modal__close:hover {
+  background: var(--primary-hover);
+  transform: rotate(8deg) scale(1.04);
+}
+
+.photo-modal__image {
+  min-height: 34rem;
+  background: var(--warm);
+}
+
+.photo-modal__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 34rem;
+  object-fit: cover;
+}
+
+.photo-modal__info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-modal__info h2 {
+  margin-bottom: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--foreground);
+}
+
+.photo-modal__info p {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.photo-modal__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.photo-modal__badges span {
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .photo-modal {
+    padding: 1rem;
+  }
+
+  .photo-modal__content {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-modal__image,
+  .photo-modal__image img {
+    min-height: 22rem;
+  }
+
+  .photo-modal__info {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-image-hint {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HERO CAROUSEL
+   ========================= */
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.85rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.45rem;
+  transform: translate(-50%, 8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.hero-carousel:hover .carousel-dots,
+.hero-carousel:focus-within .carousel-dots {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: hsl(40 33% 98% / 0.72);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.carousel-dots .dot.active {
+  width: 22px;
+  background: var(--primary);
+}
+
+.carousel-dots .dot:hover,
+.carousel-dots .dot:focus-visible {
+  background: var(--primary);
+  transform: scale(1.08);
+}

@@ -240,6 +240,94 @@ function setupBackToTop() {
   toggle();
 }
 
+function setupAboutPhotoModal() {
+  const openButton = document.getElementById("openAboutModal");
+  const modal = document.getElementById("aboutPhotoModal");
+  const closeButton = document.getElementById("closeAboutModal");
+
+  if (!openButton || !modal || !closeButton) return;
+
+  const openModal = () => {
+    modal.hidden = false;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    closeButton.focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    modal.hidden = true;
+    openButton.focus();
+  };
+
+  openButton.addEventListener("click", openModal);
+  closeButton.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}
+
+function setupHeroCarousel() {
+  const carousel = document.getElementById('heroCarousel');
+  const images = document.querySelectorAll('.carousel-image');
+  const dots = document.querySelectorAll('.carousel-dots .dot');
+
+  if (!carousel || !images.length) return;
+
+  let index = 0;
+  let interval;
+
+  function showSlide(nextIndex) {
+    index = nextIndex;
+
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    showSlide((index + 1) % images.length);
+  }
+
+  function startCarousel() {
+    stopCarousel();
+    interval = setInterval(nextSlide, 6000);
+  }
+
+  function stopCarousel() {
+    clearInterval(interval);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      startCarousel();
+    });
+  });
+
+  carousel.addEventListener('mouseenter', stopCarousel);
+  carousel.addEventListener('mouseleave', startCarousel);
+  carousel.addEventListener('focusin', stopCarousel);
+  carousel.addEventListener('focusout', startCarousel);
+
+  showSlide(0);
+  startCarousel();
+}
+
 function init() {
   setupWhatsappLinks();
   setupMobileMenu();
@@ -249,6 +337,8 @@ function init() {
   setupFaq();
   setupCookieConsent();
   setupBackToTop();
+  setupAboutPhotoModal();
+  setupHeroCarousel();
 }
 
 document.addEventListener('DOMContentLoaded', init);

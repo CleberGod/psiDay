@@ -137,7 +137,6 @@
           <button id="resetFont" type="button" aria-label="Fonte padrão">A</button>
           <button id="increaseFont" type="button" aria-label="Aumentar fonte">A+</button>
         </div>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">🌙</button>
         <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-controls="mainNav"
           aria-expanded="false">☰</button>
       </div>
@@ -187,7 +186,10 @@
           </p>
 
           <div class="about-info">
-            <span>CRP 12/34567</span>
+            <a class="footer-crp" href="https://cadastro.cfp.org.br/" target="_blank" rel="noopener noreferrer"
+              title="Consulte meu cadastro profissional!">
+              <span>CRP 12/34567 </span>
+            </a>
             <span>Atendimento online e presencial</span>
           </div>
 
@@ -328,7 +330,7 @@
             <use href="#icon-calendar"></use>
           </svg></div>
         <div>
-          <h2>Pronta para dar o primeiro passo?</h2>
+          <h2>Pronto para dar o primeiro passo?</h2>
           <p>Agende sua consulta e comece sua jornada de transformação.</p>
         </div>
         <a class="btn btn-primary js-whatsapp-link" href="#"
@@ -520,6 +522,31 @@
       <use href="#icon-whatsapp"></use>
     </svg></a>
   <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <!-- VLibras - Acessibilidade em Libras -->
+  <div vw class="enabled vlibras-widget">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const vlibrasScript = document.createElement("script");
+
+      vlibrasScript.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+      vlibrasScript.async = true;
+
+      vlibrasScript.onload = function () {
+        if (window.VLibras) {
+          new window.VLibras.Widget("https://vlibras.gov.br/app");
+        }
+      };
+
+      document.body.appendChild(vlibrasScript);
+    });
+  </script>
 
   <script src="js/script.js" defer></script>
 </body>

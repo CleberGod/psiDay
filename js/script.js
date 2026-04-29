@@ -19,7 +19,7 @@ const selectors = {
 };
 
 const config = {
-  whatsappNumber: '5511999999999',
+  whatsappNumber: '5543984442427',
   defaultWhatsappMessage: 'Olá, Dra. Dayane. Gostaria de agendar uma consulta.',
 };
 

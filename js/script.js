@@ -286,6 +286,8 @@ function setupHeroCarousel() {
 
   let index = 0;
   let interval;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   function showSlide(nextIndex) {
     index = nextIndex;
@@ -301,6 +303,10 @@ function setupHeroCarousel() {
 
   function nextSlide() {
     showSlide((index + 1) % images.length);
+  }
+
+  function previousSlide() {
+    showSlide((index - 1 + images.length) % images.length);
   }
 
   function startCarousel() {
@@ -323,6 +329,28 @@ function setupHeroCarousel() {
   carousel.addEventListener('mouseleave', startCarousel);
   carousel.addEventListener('focusin', stopCarousel);
   carousel.addEventListener('focusout', startCarousel);
+
+  carousel.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+    stopCarousel();
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+
+    const swipeDistance = touchStartX - touchEndX;
+    const minimumSwipeDistance = 50;
+
+    if (swipeDistance > minimumSwipeDistance) {
+      nextSlide();
+    }
+
+    if (swipeDistance < -minimumSwipeDistance) {
+      previousSlide();
+    }
+
+    startCarousel();
+  }, { passive: true });
 
   showSlide(0);
   startCarousel();

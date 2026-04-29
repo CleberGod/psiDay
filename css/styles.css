@@ -1543,6 +1543,8 @@ body.modal-open {
 .hero-carousel {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 .carousel-image {
@@ -1559,6 +1561,7 @@ body.modal-open {
 .carousel-image.active {
   opacity: 1;
   z-index: 1;
+  transform: scale(1.05);
 }
 
 /* Dots */
